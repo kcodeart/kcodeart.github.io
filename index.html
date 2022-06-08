@@ -2,14 +2,43 @@
     <script src="js/p5.js"></script>
     <script src="js/p5.sound.min.js"></script>
     <script src="js/p5.easycam.js"></script>
+    <script src="js/sketch.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta charset="utf-8">
 
   </head>
   <body>
-    <main>
+    <main class="mainCanvas">
+      <!-- Il main lo crea p5 createCanvas() -->
     </main>
-    <script src="js/sketch.js"></script>
-  
+    <div class="w3-row">
+      <div class="w3-col s4 w3-black w3-center">
+
+        <!-- First Slider -->
+        <p>scl</p>
+        <input type="range" min="5" max="60" value="20" step="1" class="slider" id="sclRange">
+        <p><span id="sclValue"></span></p>
+        
+      </div>
+      <div class="w3-col s4 w3-black w3-center">
+
+        <!-- Second Slider -->
+        <p>xoff increment</p>
+        <input type="range" min="0" max="2" value="0.2" step="0.1" class="slider" id="xincRange">
+        <p><span id="xincValue"></span></p>
+
+      </div>
+      <div class="w3-col s4 w3-black w3-center">
+
+        <!-- Third Slider -->
+        <p>yoff increment</p>
+        <input type="range" min="0" max="2" value="0.2" step="0.1" class="slider" id="yincRange">
+        <p><span id="yincValue"></span></p>
+
+      </div>
+    </div>
+
+    
 
 </body></html>

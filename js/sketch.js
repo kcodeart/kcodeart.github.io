@@ -11,20 +11,21 @@ let slideSCL;
 let slideXINC;
 let slideYINC;
 
+let slider;
+let output;
+output.innerHTML = slider.value; // visualizzo il valore dello slider
+
 function setup() {
-  createCanvas(600, 600, WEBGL);
+  createCanvas(windowWidth, 600, WEBGL);
   
   // Add slider for parameters
-  createP("scl").style("color", "white");
-  slideSCL = createSlider(5, 60, 20, 1);
-  createP("xoff increment").style("color", "white");
-  slideXINC = createSlider(0, 2, 0.2, 0.1);
-  createP("yoff increment").style("color", "white");
-  slideYINC = createSlider(0, 2, 0.2, 0.1);
+  slideSCL = select("#sclRange");
+  slideXINC = select("#xincRange");
+  slideYINC = select("#yincRange");
   
   genTerrain();
   
-  let easycam = new Dw.EasyCam(this._renderer, {distance:1150, center:[0,0,0], rotation:[0,0,0,0]});
+  new Dw.EasyCam(this._renderer, {distance:1150, center:[0,0,0], rotation:[0,0,0,0]});
   
 }
 

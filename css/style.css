@@ -1,7 +1,51 @@
 html, body {
   margin: 0;
   padding: 0;
+  background-color: black;
+  height: 100%; 
+  overflow: hidden
 }
+
 canvas {
   display: block;
+}
+
+.mainCanvas {
+  align-items: center;
+}
+
+.sliderContainer {
+  background-color: red;
+  width: 100%;
+}
+
+/* ------ SLIDER CSS --------- */
+.slider {
+  -webkit-appearance: none;
+  width: 50%;
+  height: 5px;
+  border-radius: 10px;  
+  background: #ffffff;
+  outline: none;
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  background: #3dc392;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  background: #3dc392;
+  cursor: pointer;
 }
